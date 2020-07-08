@@ -6,4 +6,8 @@ describe("wrong wrap", () => {
 
     cy.get("body").test();
   });
+
+  it("should be able to use screenshot", () => {
+    cy.get("body").takeScreenshot();
+  });
 });

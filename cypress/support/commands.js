@@ -33,3 +33,9 @@ Cypress.Commands.add("test", { prevSubject: true }, (subject) => {
     }
   });
 });
+
+Cypress.Commands.add("takeScreenshot", { prevSubject: true }, (subject) => {
+  cy.wrap(subject).then(($el) => {
+    cy.wrap($el).screenshot();
+  });
+});
